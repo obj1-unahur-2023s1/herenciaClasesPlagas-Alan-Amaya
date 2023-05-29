@@ -8,7 +8,6 @@ class Plaga {
 	method transmitenEnfermedad() = poblacion >= 10
 	method atacar(){ poblacion =+ poblacion*0.1}
 	
-	method esAbstracta()
 }
 
 class Cucarachas inherits Plaga {
