@@ -11,10 +11,11 @@ class Plaga {
 
 class Cucarachas inherits Plaga {
 	var property peso = 0
+	var property pesoPromedio = (peso*poblacion)/poblacion
 	
 	override method nivelDeDanio() = poblacion/2
 	
-	override method transmitenEnfermedad(){	return super() and (peso*poblacion)/poblacion >= 10	}
+	override method transmitenEnfermedad(){	return super() and pesoPromedio >= 10	}
 	
 	override method atacar(){
 		super()
