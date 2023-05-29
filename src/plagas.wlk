@@ -8,6 +8,7 @@ class Plaga {
 	method transmitenEnfermedad() = poblacion >= 10
 	method atacar(){ poblacion =+ poblacion*0.1}
 	
+	method esAbstracta()
 }
 
 class Cucarachas inherits Plaga {
@@ -21,21 +22,29 @@ class Cucarachas inherits Plaga {
 	override method atacar(){
 		super()
 		peso =+2
-	} 
+	}
+	
+	override method esAbstracta() = false
 }
 
 class Mosquitos inherits Plaga {
 	override method nivelDeDanio() = poblacion
 	
 	override method transmitenEnfermedad() = super() and poblacion % 3 == 0
+	
+	override method esAbstracta() = false
 }
 
 class Pulgas inherits Plaga {
 	override method nivelDeDanio() = poblacion*2
+	
+	override method esAbstracta() = false
 	
 }
 
 class Garrapatas inherits Plaga {
 	override method nivelDeDanio() = poblacion*2
 	override method atacar(){	poblacion =+ poblacion*0.2	}
+	
+	override method esAbstracta() = false
 }
