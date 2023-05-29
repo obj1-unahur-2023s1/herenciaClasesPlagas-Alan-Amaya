@@ -1,0 +1,6 @@
+import elementos.*
+
+
+class Plaga {
+	
+}
